@@ -197,12 +197,6 @@ String serialWait() {
 void setup() {
   lcd.begin(16,2);
   Serial.begin(115200);
-  if (EEPROM.read(3) == 42) {
-    // read eeprom 0x3 - check if value is 42, if so device is disabled
-    Serial.println("brick");
- notify("System Error", "Error code: 0x3 Check -- please contact support.", flashThreeTimes, 10000, false);
-    Serial.println("want");
-  }
 }
 
 void loop() {
